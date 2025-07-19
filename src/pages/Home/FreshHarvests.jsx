@@ -4,7 +4,7 @@ import mash from '../../assets/mash.jpg';
 
 const FreshHarvest = () => {
   return (
-    <div className="hero bg-base-100 w-11/12 lg:w-3/4 mx-auto min-h-screen">
+    <div id='aboutus' className="hero bg-base-100 w-11/12 lg:w-3/4 mx-auto min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-32 text-center lg:text-left">
 
         {/* Image with indicator card */}

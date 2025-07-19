@@ -10,33 +10,37 @@ const FreshProducts = () => {
   const [showAll, setShowAll] = useState(false); // For see all toggle
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          setProducts(data.data);
-          setFiltered(data.data);
-        }
-      })
-      .catch(error => {
-        console.error("Error fetching categories:", error);
-      });
-  }, []);
+  fetch("http://localhost:5000/categories")
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        // Flatten to a single array of all items
+        const allItems = Object.values(data.data).flat();
+        setProducts(allItems);
+        setFiltered(allItems);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching products:", error);
+    });
+}, []);
+
 
   useEffect(() => {
-    setShowAll(false); // Reset see all when tab changes
-    if (selectedTab === "All") {
-      setFiltered(products);
-    } else {
-      setFiltered(
-        products.filter(
-          (p) =>
-            p.categoryName &&
-            p.categoryName.toLowerCase() === selectedTab.toLowerCase()
-        )
-      );
-    }
-  }, [selectedTab, products]);
+  setShowAll(false); // Reset see all when tab changes
+  if (selectedTab === "All") {
+    setFiltered(products);
+  } else {
+    setFiltered(
+      products.filter(
+        (p) =>
+          p.category &&
+          p.category.toLowerCase() === selectedTab.toLowerCase()
+      )
+    );
+  }
+}, [selectedTab, products]);
+
 
   // Decide how many items to show
   const productsToShow = showAll ? filtered : filtered.slice(0, 8);
@@ -80,14 +84,14 @@ const FreshProducts = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {productsToShow.length === 0 ? (
             <div className="col-span-full text-center text-gray-400">
               No products found for "{selectedTab}"
             </div>
           ) : (
-            productsToShow.map((item, idx) => (
-              <FreshProductsCards key={idx} item={item} />
+            productsToShow.map((item, idx, userEmail) => (
+              <FreshProductsCards  key={idx} item={item} userEmail={userEmail}/>
             ))
           )}
         </div>

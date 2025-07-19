@@ -4,6 +4,7 @@ import FreshProducts from './FreshProducts/FreshProducts';
 import FreshHarvest from './FreshHarvests';
 import SeasonalFruits from './SeasonalFruits';
 import Testimonials from './Testimonials';
+import Blogs from './Blogs/Blogs';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <FreshHarvest></FreshHarvest>
             <SeasonalFruits></SeasonalFruits>
             <Testimonials></Testimonials>
+            <Blogs></Blogs>
         </div>
     );
 };

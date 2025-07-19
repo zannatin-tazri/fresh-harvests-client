@@ -46,7 +46,7 @@ const Register = () => {
             const userInfo = {
                 name,
                 email,
-                cartItems: [],
+                
             };
 
             const res = await axiosPublic.post('/users', userInfo);

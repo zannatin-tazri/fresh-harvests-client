@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import logo from "../../assets/logo.png";
-import { Link as ScrollLink } from "react-scroll";
 import { FaShoppingCart } from "react-icons/fa";
+import { ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -20,22 +20,15 @@ const Navbar = () => {
       <li className="text-gray-700 font-semibold text-lg">
         <NavLink to="/">Home</NavLink>
       </li>
-      {user && (
-        <li className="text-gray-700 font-semibold text-lg">
-          <NavLink to="/profile">Profile</NavLink>
-        </li>
-      )}
       <li className="text-gray-700 font-semibold text-lg">
-        <ScrollLink to="about" smooth duration={500} className="cursor-pointer">About</ScrollLink>
+        <NavLink to="/aboutus">About Us</NavLink>
+      </li>
+      
+      <li className="text-gray-700 font-semibold text-lg">
+        <NavLink to="/shop">Shop</NavLink>
       </li>
       <li className="text-gray-700 font-semibold text-lg">
-        <ScrollLink to="program" smooth duration={500} className="cursor-pointer">Program</ScrollLink>
-      </li>
-      <li className="text-gray-700 font-semibold text-lg">
-        <ScrollLink to="contact" smooth duration={500} className="cursor-pointer">Contact</ScrollLink>
-      </li>
-      <li className="text-gray-700 font-semibold text-lg">
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/blog">Blogs</NavLink>
       </li>
     </>
   );
@@ -51,7 +44,6 @@ const Navbar = () => {
               className="btn bg-white btn-ghost"
               aria-label="Toggle mobile menu"
             >
-              {/* Hamburger Icon */}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -89,15 +81,15 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-        {/* Cart Icon (Always visible top-right) */}
+        {/* Cart Icon */}
         <div className="absolute right-5 top-6">
-          <button className="btn bg-green-700 text-white border-none hover:bg-green-800 flex items-center gap-2">
+          <Link to="/cart" className="btn bg-green-700 text-white border-none hover:bg-green-800 flex items-center gap-2">
             <FaShoppingCart size={20} />
             <span>Cart</span>
-          </button>
+          </Link>
         </div>
 
-        {/* Auth Buttons (only for large screens) */}
+        {/* Auth Buttons (desktop) */}
         <div className="navbar-end gap-3 hidden lg:flex items-center pr-28">
           {user ? (
             <button onClick={handleSignout} className="btn">Sign Out</button>
