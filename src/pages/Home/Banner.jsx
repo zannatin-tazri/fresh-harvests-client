@@ -21,7 +21,7 @@ const Banner = () => {
                 className="absolute w-1/4 top-0 right-0 h-full object-cover z-0"
             />
 
-            {/* Content */}
+            
             <div className="relative z-10 flex flex-col-reverse lg:flex-row justify-between w-full px-4 sm:px-6 md:px-12 items-center gap-6 sm:gap-10 py-6 sm:py-8 max-w-screen-xl mx-auto">
                 {/* Left Section (Text) */}
                 <div className="w-full lg:max-w-xl space-y-5">
@@ -29,7 +29,7 @@ const Banner = () => {
                         Welcome to Fresh Harvest
                     </span>
 
-                    {/* Heading + Salad Offer */}
+                    
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
                             Fresh Fruits <br /> and Vegetables
@@ -57,12 +57,12 @@ const Banner = () => {
                         At Fresh Harvests, we are passionate about providing you with the freshest and most flavorful fruits and vegetables.
                     </p>
 
-                    {/* Shop Now Button */}
+                    
                     <button className="btn bg-orange-500 text-white px-4 sm:px-6 py-2 rounded hover:bg-orange-600 w-max text-sm sm:text-base">
                         Shop Now
                     </button>
 
-                    {/* App Store Buttons */}
+                    
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4">
                         <div className="flex items-center gap-2 bg-green-700 px-4 py-2 rounded">
                             <FaAppStoreIos className="text-2xl text-white" />

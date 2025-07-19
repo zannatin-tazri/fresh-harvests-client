@@ -41,7 +41,7 @@ const FruitPromoBanner = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="max-w-7xl mx-auto flex flex-col-reverse px-8 lg:flex-row items-center justify-between gap-12">
-        {/* Left Content */}
+    
         <div className="text-center lg:text-left space-y-5 w-full lg:w-1/2">
           <span className="text-sm font-semibold text-green-600 bg-green-100 px-4 py-1 rounded-full inline-block">
             Special Offer
@@ -55,7 +55,7 @@ const FruitPromoBanner = () => {
             Discount up to <span className="text-[#FF6F3D] font-bold">80% OFF</span>
           </p>
 
-          {/* Countdown */}
+         
           <div className="flex justify-center lg:justify-start gap-4 mt-6">
             {[
               { label: 'Days', value: timeLeft.days },
@@ -75,13 +75,13 @@ const FruitPromoBanner = () => {
             ))}
           </div>
 
-          {/* Promo Code */}
+         
           <div className="mt-6 inline-block bg-[#2ECC71] text-white px-6 py-2 rounded-full font-semibold text-lg">
             CODE : <span className="text-yellow-300 font-bold">FRESH28</span>
           </div>
         </div>
 
-        {/* Right Image */}
+       
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
             src={fruitImage}

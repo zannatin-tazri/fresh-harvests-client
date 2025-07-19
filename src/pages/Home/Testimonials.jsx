@@ -43,7 +43,7 @@ const Testimonials = () => {
         </p>
       </div>
 
-      {/* Carousel */}
+    
       <div className="carousel w-full rounded-lg">
         {testimonialsData.map((testimonial, index) => (
           <div
@@ -51,7 +51,7 @@ const Testimonials = () => {
             id={`slide${index}`}
             className="carousel-item flex flex-col md:flex-row items-center gap-8 w-full px-6 md:px-12 py-8"
           >
-            {/* Image */}
+           
             <div className="flex-shrink-0">
               <img
                 src={testimonial.image}
@@ -60,7 +60,7 @@ const Testimonials = () => {
               />
             </div>
 
-            {/* Text */}
+           
             <div className="bg-gray-100 p-6 rounded-xl max-w-2xl">
               <p className="text-gray-700 mb-4 text-sm md:text-base leading-relaxed">
                 “{testimonial.quote}”
@@ -73,7 +73,7 @@ const Testimonials = () => {
         ))}
       </div>
 
-      {/* Carousel Dots */}
+     
       <div className="flex justify-center gap-2 mt-6">
         {testimonialsData.map((_, index) => (
           <a

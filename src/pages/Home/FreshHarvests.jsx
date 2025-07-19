@@ -7,7 +7,7 @@ const FreshHarvest = () => {
     <div id='aboutus' className="hero bg-base-100 w-11/12 lg:w-3/4 mx-auto min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-32 text-center lg:text-left">
 
-        {/* Image with indicator card */}
+        
         <div className="indicator">
           <div className="indicator-item indicator-bottom">
             <div className="card bg-base-100 w-48 shadow-xl">
@@ -36,7 +36,7 @@ const FreshHarvest = () => {
           />
         </div>
 
-        {/* Text Content */}
+        
         <div className="flex flex-col justify-center items-center lg:items-start">
           <div className="flex justify-center">
             <button className="my-3 bg-green-200 text-green-600 font-semibold px-4 py-2 rounded-lg shadow hover:bg-yellow-400 transition">

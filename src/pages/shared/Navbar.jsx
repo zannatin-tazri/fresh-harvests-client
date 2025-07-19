@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       <div className="p-5 navbar text-gray-800 h-24 bg-base-100 shadow-sm relative z-10">
-        {/* Start */}
+       
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
             <button
@@ -76,12 +76,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Center */}
+       
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-        {/* Cart Icon */}
+        
         <div className="absolute right-5 top-6">
           <Link to="/cart" className="btn bg-green-700 text-white border-none hover:bg-green-800 flex items-center gap-2">
             <FaShoppingCart size={20} />
@@ -89,7 +89,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Auth Buttons (desktop) */}
+        
         <div className="navbar-end gap-3 hidden lg:flex items-center pr-28">
           {user ? (
             <button onClick={handleSignout} className="btn">Sign Out</button>

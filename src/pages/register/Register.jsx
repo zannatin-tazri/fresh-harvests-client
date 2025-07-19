@@ -63,7 +63,7 @@ const Register = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 console.log(result.user);
-                // Optional: Send user to DB like above
+                
             })
             .catch(err => setError(err.message));
     };

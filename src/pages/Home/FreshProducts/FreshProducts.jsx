@@ -103,7 +103,7 @@ const FreshProducts = () => {
               className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll ? "Show Less" : "See All"}
+              {showAll ? "Show Less" : "See All Products"}
             </button>
           </div>
         )}
