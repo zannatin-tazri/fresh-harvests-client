@@ -1,12 +1,37 @@
-# React + Vite
+# Prerequisites
+Before running this project, make sure you have the following installed:  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Node.js (v18 or later)  
 
-Currently, two official plugins are available:
+npm (Node Package Manager)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Required environment variables 
+VITE_apiKey=AIzaSyBPcThFIKXCLgU0m98Gqju6Cu4-o4ES3hQ
+
+VITE_authDomain=fresh-harvest-727fe.firebaseapp.com
+
+VITE_projectId=fresh-harvest-727fe,
+
+VITE_storageBucket=fresh-harvest-727fe.firebasestorage.app
+
+VITE_messagingSenderId=815102436626
+
+VITE_appId=1:815102436626:web:9d4686b4eaa63643d9ffcb
+
+VITE_measurementId=G-YR0LWZE8K2
+
+# Run server locally
+Commands-  
+
+-git clone https://github.com/zannatin-tazri/fresh-harvests-client  
+
+-cd fresh-harvests-client
+
+Create .env file to the same level as package.json and paste environment variables   
+
+
+-"npm install"  
+
+-npm run dev 
