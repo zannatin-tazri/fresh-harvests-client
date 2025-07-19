@@ -29,6 +29,8 @@ Commands-
 
 -cd fresh-harvests-client
 
+- Make sure server is running (https://github.com/zannatin-tazri/fresh-harvests-server)
+
 Create .env file to the same level as package.json and paste environment variables   
 
 
